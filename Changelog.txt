@@ -1,3 +1,4 @@
+[Rev0002] - Alterações script Gerenciador VIP.
 [Rev0001] - Adicionado script Gerenciador VIP.
 [Rev0001] - Adicionada pasta Scripts.
 [Rev0001] - Adicionado Changelog.txt

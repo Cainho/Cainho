@@ -11,7 +11,7 @@
 // | ------------------------------------------------------------------ |
 // | -- Criado Por: Caio Fajardo					|
 // | ------------------------------------------------------------------ |
-// | -- Versão: 1.0.0							|
+// | -- Versão: 1.0.1							|
 // | ------------------------------------------------------------------ |
 // | -- Descrição:							|
 // |	Função gerenciador de contas vip.				|
@@ -23,16 +23,16 @@
 // | -- Changelog:							|
 // |									|
 // |	1.0.0 - Script Iniciado. [Caio Fajardo]				|
+// |    1.0.1 - Adicionado duplicatas. [Caio Fajardo]			|
 // |									|
 // \--------------------------------------------------------------------/
+
+-	script	fVIP	-1,{
 
 // ----------------------------------------------------------------------
 // - Configurações							-
 // ----------------------------------------------------------------------
 
--	script	SistemaVip#CONF	-1,{
-
-OnInit:
 	/* Título do Script.
 	 * Este título aparece no topo do diálogo quando um jogador
 	 * iniciar uma conversa com o npc.
@@ -72,15 +72,10 @@ OnInit:
 	/* Padrão: forum.cronus-emulator.com
 	 */
 	set $site$,"forum.cronus-emulator.com";
-end;
-
-}
 
 // ----------------------------------------------------------------------
 // - NPC								-
 // ----------------------------------------------------------------------
-
--	script	SistemaVip#NPC	-1,{
 
 	switch(getgroupid()) {
 
@@ -417,7 +412,7 @@ OnPCLoginEvent:
 			atcommand "@kick "+getcharid(0);
 			end;
 		}
-		dispbottom "Você ainda não é um usuário vip? Acesse www.cronus-emulator.com agora mesmo e saiba como tornar-se um.";
+		dispbottom "Você ainda não é um usuário vip? Acesse www.ragnahour.com agora mesmo e saiba como tornar-se um.";
 		end;
 	}
 	query_sql "SELECT DATE_FORMAT(`diasvip`, '%d/%M/%Y às %T') FROM `login` WHERE `account_id` = "+getcharid(3), .@dia$;
@@ -429,7 +424,30 @@ OnPCLoginEvent:
 // - Duplicações							-
 // ----------------------------------------------------------------------
 
-prontera,149,189,5	duplicate(SistemaVip)	Funcionária Vip#PRONT	4_F_CAPEGIRL
+prontera,150,192,6	duplicate(fVIP)	Funcionária Vip#PRONT	4_F_CAPEGIRL
+morocc,162,97,6	duplicate(fVIP)	Funcionária Vip#MOROCC	4_F_CAPEGIRL
+geffen,122,62,6	duplicate(fVIP)	Funcionária Vip#GEF	4_F_CAPEGIRL
+payon,168,232,6	duplicate(fVIP)	Funcionária Vip#PAY	4_F_CAPEGIRL
+alberta,186,148,6	duplicate(fVIP)	Funcionária Vip#ALB	4_F_CAPEGIRL
+izlude,132,121,6	duplicate(fVIP)	Funcionária Vip#IZL	4_F_CAPEGIRL
+aldebaran,147,117,6	duplicate(fVIP)	Funcionária Vip#ALD	4_F_CAPEGIRL
+xmas,141,138,6	duplicate(fVIP)	Funcionária Vip#XMAS	4_F_CAPEGIRL
+comodo,190,152,6	duplicate(fVIP)	Funcionária Vip#COM	4_F_CAPEGIRL
+yuno,151,46,6	duplicate(fVIP)	Funcionária Vip#YUNO	4_F_CAPEGIRL
+amatsu,194,84,6	duplicate(fVIP)	Funcionária Vip#AMA	4_F_CAPEGIRL
+gonryun,165,122,6	duplicate(fVIP)	Funcionária Vip#GON	4_F_CAPEGIRL
+umbala,85,162,6	duplicate(fVIP)	Funcionária Vip#UMB	4_F_CAPEGIRL
+louyang,230,100,6	duplicate(fVIP)	Funcionária Vip#LOU	4_F_CAPEGIRL
+jawaii,248,141,6	duplicate(fVIP)	Funcionária Vip#JAW	4_F_CAPEGIRL
+ayothaya,146,123,6	duplicate(fVIP)	Funcionária Vip#AYO	4_F_CAPEGIRL
+einbroch,61,205,6	duplicate(fVIP)	Funcionária Vip#EIN	4_F_CAPEGIRL
+lighthalzen,156,102,6	duplicate(fVIP)	Funcionária Vip#LHZ	4_F_CAPEGIRL
+hugel,99,152,6	duplicate(fVIP)	Funcionária Vip#HUG	4_F_CAPEGIRL
+rachel,130,118,6	duplicate(fVIP)	Funcionária Vip#RAC	4_F_CAPEGIRL
+veins,221,125,6	duplicate(fVIP)	Funcionária Vip#VEINS	4_F_CAPEGIRL
+moscovia,226,191,6	duplicate(fVIP)	Funcionária Vip#MOSC	4_F_CAPEGIRL
+manuk,277,146,6	duplicate(fVIP)	Funcionária Vip#MAN	4_F_CAPEGIRL
+brasilis,197,221,6	duplicate(fVIP)	Funcionária Vip#BRA	4_F_CAPEGIRL
 
 // ----------------------------------------------------------------------
 // - Mapflags								-
